@@ -41,7 +41,6 @@ appendLicense(){
 
 $(cat ${outputfile})" > ${outputfile}
 }
-
 for input in "$@"
 do
   if [ -d ${input} ] ; then

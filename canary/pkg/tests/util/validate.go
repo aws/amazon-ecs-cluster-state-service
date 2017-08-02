@@ -16,7 +16,7 @@ package util
 import (
 	"time"
 
-	"github.com/blox/blox/cluster-state-service/canary/pkg/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/wrappers"
 	"github.com/pkg/errors"
 )
 

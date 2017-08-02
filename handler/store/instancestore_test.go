@@ -19,9 +19,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/blox/blox/cluster-state-service/handler/mocks"
-	storetypes "github.com/blox/blox/cluster-state-service/handler/store/types"
-	"github.com/blox/blox/cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/mocks"
+	storetypes "github.com/aws/amazon-ecs-cluster-state-service/handler/store/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
 	"github.com/golang/mock/gomock"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"

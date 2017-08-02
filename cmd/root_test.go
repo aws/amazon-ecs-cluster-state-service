@@ -17,7 +17,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/blox/blox/cluster-state-service/config"
+	"github.com/aws/amazon-ecs-cluster-state-service/config"
 	"github.com/stretchr/testify/assert"
 )
 

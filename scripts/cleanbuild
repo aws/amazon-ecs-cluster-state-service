@@ -17,7 +17,7 @@
 
 echo "Starting cleanbuild"
 
-cd /src/blox
+cd /src/amazon-ecs-cluster-state-service
 DIRTY_WARNING=$(cat <<EOW
 ***WARNING***
 You currently have uncommitted or unstaged changes in your git repository.
@@ -29,12 +29,11 @@ EOW
 [ ! -z "$(git status --porcelain)" ] && echo "$DIRTY_WARNING"
 
 # Fresh clone to ensure our build doesn't rely on anything outside of vcs
-git clone --quiet /src/blox /go/src/github.com/blox/blox
+git clone --quiet /src/amazon-ecs-cluster-state-service /go/src/github.com/aws/amazon-ecs-cluster-state-service
 
 # Allows the build to be marked as 'clean' so we can distinguish a properly
 # created build.
-export BLOX_CLUSTER_STATE_SERVICE_RELEASE="cleanbuild"
+export AMAZON_ECS_CLUSTER_STATE_SERVICE_RELEASE="cleanbuild"
 
-cd /go/src/github.com/blox/blox/cluster-state-service
+cd /go/src/github.com/aws/amazon-ecs-cluster-state-service
 exec ./scripts/build_binary.sh /out
-

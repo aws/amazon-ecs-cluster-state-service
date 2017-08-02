@@ -16,7 +16,7 @@ package clients
 import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/blox/blox/cluster-state-service/handler/httpclient"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/httpclient"
 	"github.com/pkg/errors"
 )
 

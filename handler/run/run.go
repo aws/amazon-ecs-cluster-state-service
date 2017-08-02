@@ -22,11 +22,11 @@ import (
 	log "github.com/cihub/seelog"
 	"github.com/pkg/errors"
 
-	"github.com/blox/blox/cluster-state-service/handler/api/v1"
-	"github.com/blox/blox/cluster-state-service/handler/clients"
-	"github.com/blox/blox/cluster-state-service/handler/event"
-	"github.com/blox/blox/cluster-state-service/handler/reconcile"
-	"github.com/blox/blox/cluster-state-service/handler/store"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/api/v1"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/clients"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/event"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/reconcile"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/store"
 	"github.com/urfave/negroni"
 	"strings"
 )

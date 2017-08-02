@@ -18,7 +18,7 @@ package mocks
 
 import (
 	context "context"
-	types "github.com/blox/blox/cluster-state-service/handler/store/types"
+	types "github.com/aws/amazon-ecs-cluster-state-service/handler/store/types"
 	gomock "github.com/golang/mock/gomock"
 )
 

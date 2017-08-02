@@ -87,11 +87,11 @@ func main() {
 		Hash:    "UNKNOWN",
 	}
 
-	if strings.TrimSpace(os.Getenv("BLOX_CLUSTER_STATE_SERVICE_RELEASE")) == "cleanbuild" {
+	if strings.TrimSpace(os.Getenv("ECS_CLUSTER_STATE_SERVICE_RELEASE")) == "cleanbuild" {
 		// 'clean' release; all other releases assumed dirty
 		info.Dirty = gitDirty()
 	}
-	if os.Getenv("BLOX_CLUSTER_STATE_SERVICE_UNKNOWN_VERSION") == "" {
+	if os.Getenv("ECS_CLUSTER_STATE_SERVICE_UNKNOWN_VERSION") == "" {
 		// When the version file is updated, the above is set
 		// Setting UNKNOWN version allows the version committed in git to never
 		// have a commit hash so that it does not churn with every commit. This

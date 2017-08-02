@@ -19,7 +19,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/sqs"
-	"github.com/blox/blox/cluster-state-service/handler/mocks"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/mocks"
 	"github.com/golang/mock/gomock"
 	"github.com/pkg/errors"
 )

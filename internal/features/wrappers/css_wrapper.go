@@ -19,9 +19,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/client"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/client/operations"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/models"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/client"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/client/operations"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/models"
 )
 
 const (
@@ -32,7 +32,7 @@ const (
 )
 
 type CSSWrapper struct {
-	client *client.BloxCSS
+	client *client.EcsCSS
 }
 
 func NewCSSWrapper() CSSWrapper {

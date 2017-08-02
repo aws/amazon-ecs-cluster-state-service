@@ -1,54 +1,75 @@
-# ![Logo](blox-logo.png)
-
-
-[![Build Status](https://travis-ci.org/blox/blox.svg?branch=master)](https://travis-ci.org/blox/blox)
+# amazon-ecs-cluster-state-service
 
 ### Description
-Blox is a collection of open source projects for container management and orchestration. Blox gives you more control over how your containerized applications run on Amazon ECS. It enables you to build schedulers and integrate third-party schedulers on top of ECS, while leveraging Amazon ECS to fully manage and scale your clusters.
 
-The *blox* project provides a scheduling framework to help you easily build custom tooling, such as schedulers, on top of Amazon ECS. The framework makes it easy to consume events from Amazon ECS, store the cluster state locally, and query the local data store though APIs. The *blox* project currently consists of two components:  
+The amazon-ecs-cluster-state-service consumes events from a stream of all changes to containers and instances across your Amazon ECS clusters, persists the events in a local data store, and provides APIs (e.g., search, filter, list, etc.) that enable you to query the state of your cluster so you can respond to changes in real-time. The amazon-ecs-cluster-state-service utilizes etcd as the data store to track your Amazon ECS cluster state locally, and it also manages any drift in state by periodically reconciling state with Amazon ECS.  
 
-* *cluster-state-service*
-* *daemon-scheduler*
+### REST API
 
-The *cluster-state-service* consumes events from a stream of all changes to containers and instances across your Amazon ECS clusters, persists the events in a local data store, and provides APIs (e.g., search, filter, list, etc.) that enable you to query the state of your cluster so you can respond to changes in real-time. The *cluster-state-service* tracks your Amazon ECS cluster state locally, and manages any drift in state by periodically reconciling state with Amazon ECS.
+The amazon-ecs-cluster-state-service API operations:  
+*	Lists and describes container instances and tasks
+*	Filters container instances and tasks by status or cluster
+*	Listens to streaming container instance and task state changes
 
-The *daemon-scheduler* is a scheduler that allows you to run exactly one task per host across all nodes in a cluster. The scheduler monitors the cluster state and launches tasks as new nodes join the cluster, and it is ideal for running monitoring agents, log collectors, etc. The scheduler can be used as a reference for how to use the *cluster-state-service* to build custom scheduling logic, and we plan to add additional scheduling capabilities for different use cases.
+### Building amazon-ecs-cluster-state-service
 
+The amazon-ecs-cluster-state-service depends on golang and go-swagger. Install and configure [golang](https://golang.org/doc/). For more information about installing go-swagger, see the [go-swagger documentation](https://github.com/go-swagger/go-swagger).
 
-### Interested in learning more?
+```
+$ git clone https://github.com/aws/amazon-ecs-cluster-state-service.git
+$ cd aws/amazon-ecs-cluster-state-service
+$ make get-deps
+$ make
 
-If you are interested in learning more about the components, please read the [cluster-state-service](cluster-state-service) and [daemon-scheduler](daemon-scheduler) README files.
+# Find the cluster-state-service binary in 'out' folder
+$ ls out/
+LICENSE                 amazon-ecs-cluster-state-service
 
-### Deploying Blox
+```
 
-We provide two methods for deploying *blox*:  
-* Local deployment
-* AWS deployment
+### Usage
 
-#### Local Deployment
+We provide an AWS CloudFormation template to set up the necessary prerequisites for the amazon-ecs-cluster-state-service. After the prerequisites are ready, you can launch the amazon-ecs-cluster-state-service via the Docker compose file, if you prefer. For more information, see the the [Deployment Guide](deploy).
 
-You can deploy locally and quickly try out Blox using our Docker Compose file. This allows you to get started with building custom schedulers using the cluster-state-service. The Docker Compose file launches the *blox* components, *cluster-state-service* and *daemon-scheduler*, along with a backing state store, etcd. Please see [Blox Deployment Guide](deploy) to launch *blox* using the Docker Compose file.
+To launch the amazon-ecs-cluster-state-service manually, use the following steps.
 
-#### AWS Deployment
+#### Prerequisites
 
-We also provide an AWS CloudFormation template to launch the *blox* stack easily on AWS. The AWS deployed *blox* stack makes use of AWS services designed to provide a secure public facing scheduler endpoint.
+In order to use the amazon-ecs-cluster-state-service, you need to set up an Amazon SQS queue, configure CloudWatch Events, and add the queue as a target for ECS events.
 
-##### Creating a Blox stack on AWS
+The amazon-ecs-cluster-state-service also depends on etcd to store the cluster state locally. To set up etcd manually, see the [etcd documentation](https://github.com/coreos/etcd).
 
-Deploying Blox using the AWS CloudFormation template in AWS sets up a stack consisting of the following components:
-* An Amazon SQS queue is created for you, and Amazon CloudWatch is configured to deliver ECS events to your queue.
-* *blox* components are set up as a service running on an Amazon ECS cluster. The *cluster-state-service*, *daemon-scheduler* , and etcd containers run as a single task on a container instance. The scheduler endpoint is made reachable, which allows you to securely interact with the endpoint.
-* An Application Load Balancer (ALB) is created in front of your scheduler endpoint.
-* An Amazon API Gateway endpoint is set up as the public facing frontend and provides an authentication mechanism for the *blox* stack. The API Gateway endpoint can be used to reach the scheduler and manage tasks on the ECS cluster.
-* An AWS Lambda function acts as a simple proxy which enables the public facing API Gateway endpoint to forward requests onto the ALB listener in the VPC.
+#### Quick Start - Launching the amazon-ecs-cluster-state-service
+The amazon-ecs-cluster-state-service is provided as a Docker image for your convenience. You can launch it with the following code. Use appropriate values for AWS_REGION, etcd IP, and port and queue names.
 
-For more information about deployment instructions, see [Blox Deployment Guide](deploy).
+```
+docker run -e AWS_REGION=us-west-2 \
+    AWS_PROFILE=default \
+    -v ~/.aws:/.aws \
+    -v /tmp/css-logs:/var/output/logs \
+    amazon-ecs-cluster-state-service:0.3.0 \
+    --etcd-endpoint $ETCD_IP:$ETCD_PORT \
+    --queue_name $SQS_QUEUE_NAME
+```
 
-### Building Blox
+You can also override the logger configuration like the log file and log level.
 
-For more information about how to build these components, see [cluster-state-service](cluster-state-service) and [daemon-scheduler](daemon-scheduler).
+```
+docker run -e AWS_REGION=us-west-2 \
+AWS_PROFILE=default \
+    CSS_LOG_FILE=/var/output/logs/css.log \
+    CSS_LOG_LEVEL=info \
+    -v ~/.aws:/.aws \
+    -v /tmp/css-logs:/var/output/logs \
+    amazon-ecs-cluster-state-service:0.3.0 \
+    --etcd-endpoint $ETCD_IP:$ETCD_PORT \
+    --queue event_stream
+```
 
-### Contributing to Blox
+#### API endpoint
 
-All projects under Blox are released under Apache 2.0 and the usual Apache Contributor Agreements apply for individual contributors. All projects are maintained in public on GitHub, issues and pull requests use GitHub, and discussions use our [Gitter channel](https://gitter.im/blox). We look forward to collaborating with the community.
+After you launch the amazon-ecs-cluster-state-service, you can interact with and use the REST API by using the endpoint at port 3000. Identify the amazon-ecs-cluster-state-service container IP address and connect to port 3000. For more information about the API definitions, see the [swagger specification](swagger/v1/swagger.json).
+
+### Contributing
+
+amazon-ecs-cluster-state-service is released under Apache 2.0 and the usual Apache Contributor Agreements apply for individual contributors. All projects are maintained in public on GitHub, issues and pull requests use GitHub. We look forward to collaborating with the community.

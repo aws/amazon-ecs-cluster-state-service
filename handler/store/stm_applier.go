@@ -14,7 +14,7 @@
 package store
 
 import (
-	"github.com/blox/blox/cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
 	log "github.com/cihub/seelog"
 	"github.com/coreos/etcd/clientv3/concurrency"
 	"github.com/pkg/errors"

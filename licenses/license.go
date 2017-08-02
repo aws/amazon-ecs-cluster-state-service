@@ -215,7 +215,7 @@ const License = `                                 Apache License
    See the License for the specific language governing permissions and
    limitations under the License.
 ***
-./../../vendor/github.com/PuerkitoBio/purell
+./../vendor/github.com/PuerkitoBio/purell
 
 Copyright (c) 2012, Martin Angers
 All rights reserved.
@@ -231,7 +231,7 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/PuerkitoBio/urlesc
+./../vendor/github.com/PuerkitoBio/urlesc
 
 Copyright (c) 2012 The Go Authors. All rights reserved.
 
@@ -262,7 +262,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/asaskevich/govalidator
+./../vendor/github.com/asaskevich/govalidator
 
 The MIT License (MIT)
 
@@ -287,7 +287,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/github.com/aws/aws-sdk-go
+./../vendor/github.com/aws/aws-sdk-go
 
 
                                  Apache License
@@ -493,7 +493,7 @@ SOFTWARE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/beorn7/perks
+./../vendor/github.com/beorn7/perks
 
 Copyright (C) 2013 Blake Mizerany
 
@@ -517,7 +517,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ***
-./../../vendor/github.com/cihub/seelog
+./../vendor/github.com/cihub/seelog
 
 Copyright (c) 2012, Cloud Instruments Co., Ltd. <info@cin.io>
 All rights reserved.
@@ -545,7 +545,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/coreos/etcd
+./../vendor/github.com/coreos/etcd
 
 
                                  Apache License
@@ -751,11 +751,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/davecgh/go-spew
+./../vendor/github.com/davecgh/go-spew
 
 ISC License
 
-Copyright (c) 2012-2013 Dave Collins <dave@davec.name>
+Copyright (c) 2012-2016 Dave Collins <dave@davec.name>
 
 Permission to use, copy, modify, and distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -770,7 +770,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ***
-./../../vendor/github.com/fsnotify/fsnotify
+./../vendor/github.com/fsnotify/fsnotify
 
 Copyright (c) 2012 The Go Authors. All rights reserved.
 Copyright (c) 2012 fsnotify Authors. All rights reserved.
@@ -802,7 +802,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/ghodss/yaml
+./../vendor/github.com/ghodss/yaml
 
 The MIT License (MIT)
 
@@ -856,7 +856,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/go-ini/ini
+./../vendor/github.com/go-ini/ini
 
 Apache License
 Version 2.0, January 2004
@@ -1051,7 +1051,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/analysis
+./../vendor/github.com/go-openapi/analysis
 
 
                                  Apache License
@@ -1257,7 +1257,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/errors
+./../vendor/github.com/go-openapi/errors
 
 
                                  Apache License
@@ -1463,7 +1463,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/jsonpointer
+./../vendor/github.com/go-openapi/jsonpointer
 
 
                                  Apache License
@@ -1669,7 +1669,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/jsonreference
+./../vendor/github.com/go-openapi/jsonreference
 
 
                                  Apache License
@@ -1875,7 +1875,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/loads
+./../vendor/github.com/go-openapi/loads
 
 
                                  Apache License
@@ -2081,7 +2081,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/runtime
+./../vendor/github.com/go-openapi/runtime
 
 
                                  Apache License
@@ -2287,7 +2287,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/spec
+./../vendor/github.com/go-openapi/spec
 
 
                                  Apache License
@@ -2493,7 +2493,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/strfmt
+./../vendor/github.com/go-openapi/strfmt
 
 
                                  Apache License
@@ -2699,7 +2699,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/swag
+./../vendor/github.com/go-openapi/swag
 
 
                                  Apache License
@@ -2905,7 +2905,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/go-openapi/validate
+./../vendor/github.com/go-openapi/validate
 
 
                                  Apache License
@@ -3111,7 +3111,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/golang/mock
+./../vendor/github.com/golang/mock
 
 
                                  Apache License
@@ -3317,7 +3317,7 @@ third-party archives.
    limitations under the License.
 
 ***
-./../../vendor/github.com/golang/protobuf
+./../vendor/github.com/golang/protobuf
 
 Go support for Protocol Buffers - Google's data interchange format
 
@@ -3351,7 +3351,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/gorilla/mux
+./../vendor/github.com/gorilla/mux
 
 Copyright (c) 2012 Rodrigo Moraes. All rights reserved.
 
@@ -3382,7 +3382,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/grpc-ecosystem/go-grpc-prometheus
+./../vendor/github.com/grpc-ecosystem/go-grpc-prometheus
 
                  Apache License
                            Version 2.0, January 2004
@@ -3587,7 +3587,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/grpc-ecosystem/grpc-gateway
+./../vendor/github.com/grpc-ecosystem/grpc-gateway
 
 Copyright (c) 2015, Gengo, Inc.
 All rights reserved.
@@ -3618,7 +3618,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/gucumber/gucumber
+./../vendor/github.com/gucumber/gucumber
 
 Copyright (c) 2015 Loren Segal
 
@@ -3644,7 +3644,7 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 ***
-./../../vendor/github.com/hashicorp/hcl
+./../vendor/github.com/hashicorp/hcl
 
 Mozilla Public License, version 2.0
 
@@ -4001,7 +4001,7 @@ Exhibit B - “Incompatible With Secondary Licenses” Notice
       the Mozilla Public License, v. 2.0.
 
 ***
-./../../vendor/github.com/inconshreveable/mousetrap
+./../vendor/github.com/inconshreveable/mousetrap
 
 Copyright 2014 Alan Shreve
 
@@ -4018,7 +4018,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ***
-./../../vendor/github.com/jmespath/go-jmespath
+./../vendor/github.com/jmespath/go-jmespath
 
 Copyright 2015 James Saryerwinnie
 
@@ -4035,7 +4035,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ***
-./../../vendor/github.com/kr/fs
+./../vendor/github.com/kr/fs
 
 Copyright (c) 2012 The Go Authors. All rights reserved.
 
@@ -4066,7 +4066,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/magiconair/properties
+./../vendor/github.com/magiconair/properties
 
 goproperties - properties file decoder for Go
 
@@ -4095,7 +4095,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/mailru/easyjson
+./../vendor/github.com/mailru/easyjson
 
 Copyright (c) 2016 Mail.Ru Group
 
@@ -4106,7 +4106,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ***
-./../../vendor/github.com/matttproud/golang_protobuf_extensions
+./../vendor/github.com/matttproud/golang_protobuf_extensions
 
                                  Apache License
                            Version 2.0, January 2004
@@ -4311,7 +4311,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
    limitations under the License.
 
 ***
-./../../vendor/github.com/mitchellh/mapstructure
+./../vendor/github.com/mitchellh/mapstructure
 
 The MIT License (MIT)
 
@@ -4336,42 +4336,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 ***
-./../../vendor/github.com/pborman/uuid
-
-Copyright (c) 2009,2014 Google Inc. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-   * Redistributions of source code must retain the above copyright
-notice, this list of conditions and the following disclaimer.
-   * Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following disclaimer
-in the documentation and/or other materials provided with the
-distribution.
-   * Neither the name of Google Inc. nor the names of its
-contributors may be used to endorse or promote products derived from
-this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-***
-./../../vendor/github.com/pelletier/go-toml
+./../vendor/github.com/pelletier/go-toml
 
 The MIT License (MIT)
 
-Copyright (c) 2013 - 2016 Thomas Pelletier, Eric Anderton
+Copyright (c) 2013 - 2017 Thomas Pelletier, Eric Anderton
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -4392,7 +4361,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/github.com/pkg/errors
+./../vendor/github.com/pkg/errors
 
 Copyright (c) 2015, Dave Cheney <dave@cheney.net>
 All rights reserved.
@@ -4419,7 +4388,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/pkg/sftp
+./../vendor/github.com/pkg/sftp
 
 Copyright (c) 2013, Dave Cheney
 All rights reserved.
@@ -4432,7 +4401,7 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/pmezard/go-difflib
+./../vendor/github.com/pmezard/go-difflib
 
 Copyright (c) 2013, Patrick Mezard
 All rights reserved.
@@ -4463,7 +4432,7 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/prometheus/client_golang
+./../vendor/github.com/prometheus/client_golang
 
                                  Apache License
                            Version 2.0, January 2004
@@ -4668,7 +4637,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/prometheus/client_model
+./../vendor/github.com/prometheus/client_model
 
                                  Apache License
                            Version 2.0, January 2004
@@ -4873,7 +4842,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/prometheus/common
+./../vendor/github.com/prometheus/common
 
                                  Apache License
                            Version 2.0, January 2004
@@ -5078,7 +5047,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/prometheus/procfs
+./../vendor/github.com/prometheus/procfs
 
                                  Apache License
                            Version 2.0, January 2004
@@ -5283,31 +5252,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    limitations under the License.
 
 ***
-./../../vendor/github.com/satori/go.uuid
-
-Copyright (C) 2013-2016 by Maxim Bublis <b@codemonkey.ru>
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-***
-./../../vendor/github.com/shiena/ansicolor
+./../vendor/github.com/shiena/ansicolor
 
 The MIT License (MIT)
 
@@ -5332,7 +5277,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/github.com/spf13/afero
+./../vendor/github.com/spf13/afero
 
                                 Apache License
                            Version 2.0, January 2004
@@ -5510,7 +5455,7 @@ SOFTWARE.
       of your accepting any such warranty or additional liability.
 
 ***
-./../../vendor/github.com/spf13/cast
+./../vendor/github.com/spf13/cast
 
 The MIT License (MIT)
 
@@ -5535,7 +5480,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/github.com/spf13/cobra
+./../vendor/github.com/spf13/cobra
 
                                 Apache License
                            Version 2.0, January 2004
@@ -5713,7 +5658,7 @@ SOFTWARE.
       of your accepting any such warranty or additional liability.
 
 ***
-./../../vendor/github.com/spf13/jwalterweatherman
+./../vendor/github.com/spf13/jwalterweatherman
 
 The MIT License (MIT)
 
@@ -5738,7 +5683,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/github.com/spf13/pflag
+./../vendor/github.com/spf13/pflag
 
 Copyright (c) 2012 Alex Ogier. All rights reserved.
 Copyright (c) 2012 The Go Authors. All rights reserved.
@@ -5770,7 +5715,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/spf13/viper
+./../vendor/github.com/spf13/viper
 
 The MIT License (MIT)
 
@@ -5795,7 +5740,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/github.com/stretchr/testify
+./../vendor/github.com/stretchr/testify
 
 Copyright (c) 2012 - 2013 Mat Ryer and Tyler Bunnell
 
@@ -5821,7 +5766,7 @@ OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ***
-./../../vendor/github.com/urfave/negroni
+./../vendor/github.com/urfave/negroni
 
 The MIT License (MIT)
 
@@ -5846,7 +5791,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/golang.org/x/crypto
+./../vendor/golang.org/x/crypto
 
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
@@ -5877,7 +5822,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/golang.org/x/net
+./../vendor/golang.org/x/net
 
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
@@ -5908,7 +5853,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/golang.org/x/sys
+./../vendor/golang.org/x/sys
 
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
@@ -5939,7 +5884,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/golang.org/x/text
+./../vendor/golang.org/x/text
 
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
@@ -5970,7 +5915,36 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/gopkg.in/yaml.v2
+./../vendor/gopkg.in/mgo.v2
+
+mgo - MongoDB driver for Go
+
+Copyright (c) 2010-2013 - Gustavo Niemeyer <gustavo@niemeyer.net>
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: 
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer. 
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+***
+./../vendor/gopkg.in/yaml.v2
 
 Copyright 2011-2016 Canonical Ltd.
 
@@ -6018,7 +5992,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ***
-./../../vendor/google.golang.org/grpc
+./../vendor/google.golang.org/grpc
 
 Copyright 2014, Google Inc.
 All rights reserved.
@@ -6050,7 +6024,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ***
-./../../vendor/github.com/pelletier/go-buffruneio
+./../vendor/github.com/pelletier/go-buffruneio
 
 Copyright (c) 2016 Thomas Pelletier
 

@@ -14,7 +14,7 @@
 package e2etasksteps
 
 import (
-	"github.com/blox/blox/cluster-state-service/internal/features/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/internal/features/wrappers"
 	. "github.com/gucumber/gucumber"
 )
 

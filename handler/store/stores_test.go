@@ -16,7 +16,7 @@ package store
 import (
 	"testing"
 
-	"github.com/blox/blox/cluster-state-service/handler/mocks"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/mocks"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"

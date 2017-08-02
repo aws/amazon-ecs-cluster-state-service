@@ -14,9 +14,9 @@
 package wrappers
 
 import (
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/client"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/client/operations"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/models"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/client"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/client/operations"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/models"
 	httptransport "github.com/go-openapi/runtime/client"
 	"github.com/pkg/errors"
 )
@@ -30,7 +30,7 @@ type CSSWrapper interface {
 }
 
 type cssClientWrapper struct {
-	client *client.BloxCSS
+	client *client.EcsCSS
 }
 
 // NewCSSWrapper returns a new CSSWrapper for the canary
@@ -44,7 +44,7 @@ func NewCSSWrapper(clusterStateServiceEndpoint string) (CSSWrapper, error) {
 	}, nil
 }
 
-func newCSSClient(clusterStateServiceEndpoint string) (*client.BloxCSS, error) {
+func newCSSClient(clusterStateServiceEndpoint string) (*client.EcsCSS, error) {
 	if clusterStateServiceEndpoint == "" {
 		return nil, errors.New("The address of the cluster-state-service endpoint had to be set to initialize the canary. ")
 	}

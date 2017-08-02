@@ -19,7 +19,7 @@ export LANG=C
 
 set -e
 outputfile=${1?Must provide an output file}
-inputfile="$(<../../LICENSE)"
+inputfile="$(<../LICENSE)"
 
 appendRepoLicense() {
   repo=$1
@@ -38,7 +38,7 @@ appendRepoLicense() {
 }
 
 for registry in github.com golang.org; do
-  for user in ./../../vendor/$registry/*; do
+  for user in ./../vendor/$registry/*; do
     for repo in $user/*; do
       if [[ $repo == *"go-buffruneio"* ]]; then
         # nop, since we add this explicitliy
@@ -50,13 +50,13 @@ for registry in github.com golang.org; do
   done;
 done;
 
-for repo in ./../../vendor/gopkg.in/* ./../../vendor/google.golang.org/*; do
+for repo in ./../vendor/gopkg.in/* ./../vendor/google.golang.org/*; do
   appendRepoLicense $repo
 done;
 
 inputfile+="
 ***
-./../../vendor/github.com/pelletier/go-buffruneio
+./../vendor/github.com/pelletier/go-buffruneio
 
 Copyright (c) 2016 Thomas Pelletier
 
@@ -79,7 +79,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 "
 
-tr -d '\r' > "${outputfile}" << EOF 
+tr -d '\r' > "${outputfile}" << EOF
 // Copyright 2016-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License"). You may

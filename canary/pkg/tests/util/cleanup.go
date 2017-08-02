@@ -13,7 +13,7 @@
 
 package util
 
-import "github.com/blox/blox/cluster-state-service/canary/pkg/wrappers"
+import "github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/wrappers"
 
 // DeleteCluster deletes a cluster 'clusterName' after cleaning up all the resources within
 func DeleteCluster(ecsWrapper wrappers.ECSWrapper, clusterName string) error {
