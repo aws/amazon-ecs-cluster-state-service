@@ -15,8 +15,8 @@ package event
 
 import (
 	"encoding/json"
-	"github.com/blox/blox/cluster-state-service/handler/mocks"
-	"github.com/blox/blox/cluster-state-service/handler/store"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/mocks"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/store"
 	"github.com/golang/mock/gomock"
 	"github.com/pkg/errors"
 	"testing"

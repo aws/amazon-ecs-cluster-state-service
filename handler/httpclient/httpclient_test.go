@@ -17,7 +17,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/blox/blox/cluster-state-service/handler/mocks"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/mocks"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
@@ -25,22 +25,22 @@ import (
 
 type UATestSuite struct {
 	suite.Suite
-	roundtripper     *mocks.MockRoundTripper
-	bloxRoundTripper *bloxRoundTripper
+	roundtripper    *mocks.MockRoundTripper
+	cssRoundTripper *cssRoundTripper
 }
 
 func (testSuite *UATestSuite) SetupTest() {
 	mockCtrl := gomock.NewController(testSuite.T())
 	testSuite.roundtripper = mocks.NewMockRoundTripper(mockCtrl)
-	testSuite.bloxRoundTripper = &bloxRoundTripper{}
-	testSuite.bloxRoundTripper.transport = testSuite.roundtripper
+	testSuite.cssRoundTripper = &cssRoundTripper{}
+	testSuite.cssRoundTripper.transport = testSuite.roundtripper
 }
 
 func TestUATestSuite(t *testing.T) {
 	suite.Run(t, new(UATestSuite))
 }
 
-func (testSuite *UATestSuite) TestBloxUA() {
+func (testSuite *UATestSuite) TestCSSUA() {
 
 	req := &http.Request{
 		Header: make(http.Header),
@@ -49,12 +49,12 @@ func (testSuite *UATestSuite) TestBloxUA() {
 
 	testSuite.roundtripper.EXPECT().RoundTrip(req).Return(nil, nil)
 
-	rsp, err := testSuite.bloxRoundTripper.RoundTrip(req)
+	rsp, err := testSuite.cssRoundTripper.RoundTrip(req)
 
 	actualUserAgent := req.Header.Get(userAgentHeader)
 	testSuite.T().Logf("UA : %s", actualUserAgent)
 	assert.Equal(testSuite.T(), actualUserAgent, userAgent,
-		"Blox CSS user agent with unexpected value. Expected: %s Actual: %s", userAgent, actualUserAgent)
+		"ECS CSS user agent with unexpected value. Expected: %s Actual: %s", userAgent, actualUserAgent)
 	assert.Nil(testSuite.T(), err, "Unexpected error when calling RoundTrip")
 	assert.Nil(testSuite.T(), rsp, "Unexpected response when calling RoundTrip")
 }

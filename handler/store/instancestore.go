@@ -19,9 +19,9 @@ import (
 	"strings"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/blox/blox/cluster-state-service/handler/regex"
-	storetypes "github.com/blox/blox/cluster-state-service/handler/store/types"
-	"github.com/blox/blox/cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/regex"
+	storetypes "github.com/aws/amazon-ecs-cluster-state-service/handler/store/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
 	log "github.com/cihub/seelog"
 	"github.com/pkg/errors"
 )

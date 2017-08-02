@@ -13,7 +13,7 @@
 
 # Not from scratch because we also want a little directory structure,
 # specifically /tmp
-FROM bloxoss/cluster-state-service-scratch:make
+FROM amazon-ecs-cluster-state-service-scratch:make
 MAINTAINER Amazon Web Services, Inc.
 
 COPY out/cluster-state-service /cluster-state-service
@@ -25,4 +25,3 @@ COPY misc/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
 EXPOSE 3000
 ENTRYPOINT ["/cluster-state-service"]
-

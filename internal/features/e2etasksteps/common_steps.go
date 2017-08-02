@@ -21,8 +21,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/ecs"
-	"github.com/blox/blox/cluster-state-service/internal/features/wrappers"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/models"
+	"github.com/aws/amazon-ecs-cluster-state-service/internal/features/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/models"
 	. "github.com/gucumber/gucumber"
 	"github.com/pkg/errors"
 )

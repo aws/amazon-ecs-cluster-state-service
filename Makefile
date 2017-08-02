@@ -39,39 +39,39 @@ generate: $(SWAGGER_GEN) $(SOURCES)
 
 .PHONY: generate build-in-docker
 build-in-docker:
-	@docker build -f scripts/dockerfiles/Dockerfile.build -t "bloxoss/cluster-state-service-build:make" .
+	@docker build -f scripts/dockerfiles/Dockerfile.build -t "amazon-ecs-cluster-state-service-build:make" .
 	@docker run --net=none \
 	    -v "$(shell pwd)/out:/out" \
-	    -v "$(shell pwd):/go/src/github.com/blox/blox/cluster-state-service" \
-	    -v "$(shell dirname ${ROOT}):/go/src/github.com/blox/blox" \
-	    "bloxoss/cluster-state-service-build:make"
+	    -v "$(shell pwd):/go/src/github.com/aws/amazon-ecs-cluster-state-service" \
+	    -v "${ROOT}:/go/src/github.com/aws/amazon-ecs-cluster-state-service" \
+	    "amazon-ecs-cluster-state-service-build:make"
 
 .PHONY: certs
 certs: misc/certs/ca-certificates.crt
 misc/certs/ca-certificates.crt:
-	docker build -t "bloxoss/cluster-state-service-cert-source:make" misc/certs/
-	docker run "bloxoss/cluster-state-service-cert-source:make" cat /etc/ssl/certs/ca-certificates.crt > misc/certs/ca-certificates.crt
+	docker build -t "amazon-ecs-cluster-state-service-cert-source:make" misc/certs/
+	docker run "amazon-ecs-cluster-state-service-cert-source:make" cat /etc/ssl/certs/ca-certificates.crt > misc/certs/ca-certificates.crt
 
 .PHONY: docker
 docker: certs build-in-docker
 	@cd scripts && ./create-cluster-state-service-scratch
-	@docker build -f scripts/dockerfiles/Dockerfile.release -t "bloxoss/cluster-state-service:make" .
-	@echo "Built Docker image \"bloxoss/cluster-state-service:make\""
+	@docker build -f scripts/dockerfiles/Dockerfile.release -t "amazon-ecs-cluster-state-service:make" .
+	@echo "Built Docker image \"amazon-ecs-cluster-state-service:make\""
 
 .PHONY: docker-release
 docker-release:
-	@docker build -f scripts/dockerfiles/Dockerfile.cleanbuild -t "bloxoss/cluster-state-service-cleanbuild:make" .
-	@echo "Built Docker image \"bloxoss/cluster-state-service-cleanbuild:make\""
+	@docker build -f scripts/dockerfiles/Dockerfile.cleanbuild -t "amazon-ecs-cluster-state-service-cleanbuild:make" .
+	@echo "Built Docker image \"amazon-ecs-cluster-state-service-cleanbuild:make\""
 	@docker run --net=none \
 	    -v "$(shell pwd)/out:/out" \
-	    -v "$(shell dirname ${ROOT}):/src/blox" \
-	    "bloxoss/cluster-state-service-cleanbuild:make"
+	    -v "${ROOT}:/src/amazon-ecs-cluster-state-service" \
+	    "amazon-ecs-cluster-state-service-cleanbuild:make"
 
 .PHONY: release
 release: certs docker-release
 	@cd scripts && ./create-cluster-state-service-scratch
-	@docker build -f scripts/dockerfiles/Dockerfile.release -t "bloxoss/cluster-state-service:latest" .
-	@echo "Built Docker image \"bloxoss/cluster-state-service:latest\""
+	@docker build -f scripts/dockerfiles/Dockerfile.release -t "amazon-ecs-cluster-state-service:latest" .
+	@echo "Built Docker image \"amazon-ecs-cluster-state-service:latest\""
 
 .PHONY: get-deps
 get-deps:

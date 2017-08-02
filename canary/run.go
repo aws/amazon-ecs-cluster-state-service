@@ -17,10 +17,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/blox/blox/cluster-state-service/canary/pkg/cmd"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/logger"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/tests"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/cmd"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/logger"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/tests"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/wrappers"
 	log "github.com/cihub/seelog"
 )
 

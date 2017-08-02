@@ -14,7 +14,7 @@
 package types
 
 import (
-	"github.com/blox/blox/cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
 )
 
 type VersionedTask struct {

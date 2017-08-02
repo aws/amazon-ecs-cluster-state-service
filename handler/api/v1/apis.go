@@ -14,7 +14,7 @@
 package v1
 
 import (
-	"github.com/blox/blox/cluster-state-service/handler/store"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/store"
 )
 
 type APIs struct {

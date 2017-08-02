@@ -17,9 +17,9 @@ import (
 	"bufio"
 	"encoding/json"
 
-	"github.com/blox/blox/cluster-state-service/internal/features/e2etasksteps"
-	"github.com/blox/blox/cluster-state-service/internal/features/wrappers"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/models"
+	"github.com/aws/amazon-ecs-cluster-state-service/internal/features/e2etasksteps"
+	"github.com/aws/amazon-ecs-cluster-state-service/internal/features/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/models"
 	. "github.com/gucumber/gucumber"
 )
 

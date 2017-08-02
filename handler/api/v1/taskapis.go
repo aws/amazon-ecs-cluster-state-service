@@ -19,11 +19,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/blox/blox/cluster-state-service/handler/regex"
-	"github.com/blox/blox/cluster-state-service/handler/store"
-	storetypes "github.com/blox/blox/cluster-state-service/handler/store/types"
-	"github.com/blox/blox/cluster-state-service/handler/types"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/models"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/regex"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/store"
+	storetypes "github.com/aws/amazon-ecs-cluster-state-service/handler/store/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/models"
 	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
 )

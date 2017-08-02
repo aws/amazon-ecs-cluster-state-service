@@ -33,20 +33,20 @@ $(LOCAL_BINARY): $(SOURCES)
 
 .PHONY: build-in-docker
 build-in-docker:
-	@docker build -f scripts/dockerfiles/Dockerfile.build -t "bloxoss/cluster-state-service-canary-build:make" .
-	@echo "Built Docker image \"bloxoss/cluster-state-service-canary-build:make\""
+	@docker build -f scripts/dockerfiles/Dockerfile.build -t "ecs-cluster-state-service-canary-build:make" .
+	@echo "Built Docker image \"ecs-cluster-state-service-canary-build:make\""
 	@docker run --net=none \
 			-v "$(shell pwd)/out:/out" \
-			-v "$(shell dirname ${PARENT}):/src/blox" \
-			"bloxoss/cluster-state-service-canary-build:make"
+			-v "$(shell dirname ${PARENT}):/src/aws" \
+			"ecs-cluster-state-service-canary-build:make"
 
 .PHONY: docker-certs
 docker-certs: misc/certs/ca-certificates.crt
 misc/certs/ca-certificates.crt:
-	docker build -f scripts/dockerfiles/Dockerfile.certs -t "bloxoss/cluster-state-service-canary-cert-source:make" .
-	docker run "bloxoss/cluster-state-service-canary-cert-source:make" cat /etc/ssl/certs/ca-certificates.crt > out/docker-ca-certificates.crt
+	docker build -f scripts/dockerfiles/Dockerfile.certs -t "ecs-cluster-state-service-canary-cert-source:make" .
+	docker run "ecs-cluster-state-service-canary-cert-source:make" cat /etc/ssl/certs/ca-certificates.crt > out/docker-ca-certificates.crt
 
 .PHONY: docker-release
 docker-release: docker-certs build-in-docker
-	@docker build -f scripts/dockerfiles/Dockerfile.release -t "bloxoss/cluster-state-service-canary:latest" .
-	@echo "Built Docker image \"bloxoss/cluster-state-service-canary:latest\""
+	@docker build -f scripts/dockerfiles/Dockerfile.release -t "ecs-cluster-state-service-canary:latest" .
+	@echo "Built Docker image \"ecs-cluster-state-service-canary:latest\""

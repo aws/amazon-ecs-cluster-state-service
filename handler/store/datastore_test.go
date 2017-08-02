@@ -18,9 +18,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blox/blox/cluster-state-service/handler/mocks"
-	storetypes "github.com/blox/blox/cluster-state-service/handler/store/types"
-	"github.com/blox/blox/cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/mocks"
+	storetypes "github.com/aws/amazon-ecs-cluster-state-service/handler/store/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
 	etcd "github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
 	mvccpb "github.com/coreos/etcd/mvcc/mvccpb"

@@ -19,9 +19,9 @@ import (
 	"strings"
 
 	"github.com/aws/aws-sdk-go/aws"
-	storetypes "github.com/blox/blox/cluster-state-service/handler/store/types"
-	"github.com/blox/blox/cluster-state-service/handler/types"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/models"
+	storetypes "github.com/aws/amazon-ecs-cluster-state-service/handler/store/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/models"
 )
 
 const (

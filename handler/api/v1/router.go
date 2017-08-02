@@ -14,7 +14,7 @@
 package v1
 
 import (
-	"github.com/blox/blox/cluster-state-service/handler/regex"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/regex"
 	"github.com/gorilla/mux"
 )
 

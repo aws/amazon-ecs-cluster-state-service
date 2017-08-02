@@ -15,8 +15,8 @@ package tests
 
 import (
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/tests/util"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/tests/util"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/wrappers"
 	log "github.com/cihub/seelog"
 	"github.com/pkg/errors"
 )

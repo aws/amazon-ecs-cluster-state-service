@@ -12,7 +12,7 @@
 // permissions and limitations under the License.
 
 // Package httpclient provides a thin, but testable, wrapper around http.Client.
-// It adds an Blox User agent header to requests and provides an interface
+// It adds an ECS CSS User agent header to requests and provides an interface
 
 package httpclient
 
@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/blox/blox/daemon-scheduler/versioning"
+	"github.com/aws/amazon-ecs-cluster-state-service/versioning"
 )
 
 const (
@@ -31,31 +31,31 @@ const (
 
 var userAgent string
 
-// bloxRoundTripper helps set a custom user agent on HTTP requests.
-type bloxRoundTripper struct {
+// cssRoundTripper helps set a custom user agent on HTTP requests.
+type cssRoundTripper struct {
 	transport http.RoundTripper
 }
 
-func bloxCSSUserAgent() string {
-	return fmt.Sprintf("Blox/%s Cluster State Service", versioning.Version)
+func ecsCSSUserAgent() string {
+	return fmt.Sprintf("ECS/%s Cluster State Service", versioning.Version)
 }
 
-func (rt *bloxRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
+func (rt *cssRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
 	req.Header.Set(userAgentHeader, userAgent)
 	return rt.transport.RoundTrip(req)
 }
 
 func init() {
-	userAgent = bloxCSSUserAgent()
+	userAgent = ecsCSSUserAgent()
 }
 
-// New returns an Blox httpClient that will insert custom HTTP UA header.
+// New returns an ecs css httpClient that will insert custom HTTP UA header.
 func New() *http.Client {
 	transport := http.DefaultTransport
 
 	client := &http.Client{
-		Transport: &bloxRoundTripper{transport},
-		Timeout: httpClientTimeout,
+		Transport: &cssRoundTripper{transport},
+		Timeout:   httpClientTimeout,
 	}
 
 	return client

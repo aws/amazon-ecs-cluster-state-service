@@ -14,13 +14,13 @@
 package tests
 
 import (
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/wrappers"
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/wrappers"
 	"github.com/pkg/errors"
 )
 
 const (
-	canaryClusterNamePrefix = "bloxCSSCanary"
+	canaryClusterNamePrefix = "ecsClusterStateCanary"
 )
 
 // Canary defines methods for each test in the canary

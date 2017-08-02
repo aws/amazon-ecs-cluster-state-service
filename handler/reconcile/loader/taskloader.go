@@ -19,8 +19,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ecs/ecsiface"
-	"github.com/blox/blox/cluster-state-service/handler/store"
-	"github.com/blox/blox/cluster-state-service/handler/types"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/store"
+	"github.com/aws/amazon-ecs-cluster-state-service/handler/types"
 	log "github.com/cihub/seelog"
 	"github.com/pkg/errors"
 )

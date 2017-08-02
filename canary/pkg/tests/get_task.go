@@ -17,9 +17,9 @@ import (
 	"time"
 
   "github.com/aws/aws-sdk-go/aws"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/tests/util"
-	"github.com/blox/blox/cluster-state-service/canary/pkg/wrappers"
-	"github.com/blox/blox/cluster-state-service/swagger/v1/generated/client/operations"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/tests/util"
+	"github.com/aws/amazon-ecs-cluster-state-service/canary/pkg/wrappers"
+	"github.com/aws/amazon-ecs-cluster-state-service/swagger/v1/generated/client/operations"
 	log "github.com/cihub/seelog"
 	"github.com/pkg/errors"
 )

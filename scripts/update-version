@@ -8,7 +8,7 @@ ROOT=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
 cd "${ROOT}"
 
 echo -n "$version" > VERSION
-export BLOX_CLUSTER_STATE_SERVICE_UNKNOWN_VERSION=true
+export ECS_CLUSTER_STATE_UNKNOWN_VERSION=true
 
 cd ./versioning/
 go run gen/version-gen.go

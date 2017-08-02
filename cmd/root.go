@@ -14,7 +14,7 @@
 package cmd
 
 import (
-	"github.com/blox/blox/cluster-state-service/config"
+	"github.com/aws/amazon-ecs-cluster-state-service/config"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -39,7 +39,7 @@ func createRootCommand() *cobra.Command {
 		// TODO: Fix these messages
 		Use:   "cluster-state-service",
 		Short: "cluster-state-service consumes events from Amazon ECS and provides a local view of the cluster state",
-		Long: `cluster-state-service processes EC2 Container Service events and  creates 
+		Long: `cluster-state-service processes EC2 Container Service events and  creates
 a localized data store, which provides you a near-real-time view of your cluster state.`,
 		Run: func(cmd *cobra.Command, args []string) {
 		},

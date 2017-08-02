@@ -17,7 +17,7 @@ MAINTAINER Amazon Web Services, Inc.
 RUN mkdir -p /out
 VOLUME ['/out']
 
-RUN mkdir -p /go/src/github.com/blox/
+RUN mkdir -p /go/src/github.com/aws/amazon-ecs-cluster-state-service
 
 COPY ./scripts/clean_docker_build.sh /scripts/clean_docker_build.sh
 

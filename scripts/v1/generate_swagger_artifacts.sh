@@ -25,7 +25,7 @@ REMOVE_CLIENT="rm -rf ./client ||:"
 ${REMOVE_CLIENT}
 
 # Generate models and client
-SWAGGER_GENERATE="swagger generate client -f ../swagger.json -A blox_css"
+SWAGGER_GENERATE="swagger generate client -f ../swagger.json -A ecs_css"
 ${SWAGGER_GENERATE}
 
 cd ${ROOT}

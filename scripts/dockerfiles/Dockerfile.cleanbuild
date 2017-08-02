@@ -11,15 +11,14 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-FROM golang:1.7
+FROM golang:1.8
 MAINTAINER Amazon Web Services, Inc.
 
 RUN mkdir -p /out
 VOLUME ['/out']
 
-RUN mkdir -p /go/src/github.com/blox/
+RUN mkdir -p /go/src/github.com/aws/amazon-ecs-cluster-state-service
 
 COPY ./scripts/cleanbuild /scripts/cleanbuild
 
 ENTRYPOINT /scripts/cleanbuild
-
