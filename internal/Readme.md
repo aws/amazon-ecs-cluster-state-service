@@ -4,7 +4,8 @@
 These tests call the cluster-state-service (CSS) APIs using the swagger generated client. They use ECS APIs to start tasks etc. and exercise the CSS consumer to consume events from the ECS event-stream and update the local state in etcd. The CSS client is then used to exercise the APIs supported by the CSS.
 
 ### What are the assumptions made?
-* CSS server is running locally.
+* etcd is running locally.
+* CSS server is running locally (`AWS_REGION=$region AWS_PROFILE=$profile cluster-state-service --queue $queue_name --bind localhost:3000 --etcd-endpoint localhost:2379`)
 * The test will automatically set up the environment for you. By default, one EC2 instance is launched with the latest ECS-optimized AMI and without a key pair. The instance is set to auto-terminate itself after 1 hour in case the test fails to clean up. The instance is then registered to an ECS cluster named `E2ETestCluster`.
 
 ### How to run the test suite?
